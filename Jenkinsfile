@@ -1,14 +1,10 @@
 pipeline {
-    agent {
-        docker {
-            image 'php'
-        }
-    }
+    agent any
 
     stages {
         stage ('Build') {
             steps {
-                sh 'php --version'
+                sh 'echo "Hello, Jenkins!"'
             }
         }
     }
