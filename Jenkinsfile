@@ -19,12 +19,6 @@ pipeline {
                 sh 'echo "Deploying"'
             }
         }
-
-        stage ('Post Deploy Testing') {
-            steps {
-                sh 'echo "Post deploy testing"'
-            }
-        }
     }
 
     post {
@@ -41,7 +35,7 @@ pipeline {
         }
 
         unstable {
-            echo 'This will only run if the run was marked as unstable'
+            echo 'This will only run if the run was marked as unstable' // A pipeline that has failing tests will be marked as unstable
         }
 
         changed {
