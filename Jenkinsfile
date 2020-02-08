@@ -4,7 +4,25 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'echo "Hello, Jenkins!"'
+                sh 'echo "Building..."'
+            }
+        }
+
+        stage ('Test') {
+            steps {
+                sh 'echo "Testing..."'
+            }
+        }
+
+        stage ('Deploy') {
+            steps {
+                sh 'echo "Deploying"'
+            }
+        }
+
+        stage ('Post Deploy Testing') {
+            steps {
+                sh 'echo "Post deploy testing"'
             }
         }
     }
