@@ -4,19 +4,19 @@ pipeline {
     stages {
         stage ('Build') {
             steps {
-                sh 'echo "Building on master branch..."'
+                sh 'echo "Building..."'
             }
         }
 
         stage ('Test') {
             steps {
-                sh 'echo "Testing on master branch..."'
+                sh 'echo "Testing..."'
             }
         }
 
         stage ('Deploy') {
             steps {
-                sh 'echo "Deploying on master branch..."'
+                sh 'echo "Deploying.."'
             }
         }
     }
